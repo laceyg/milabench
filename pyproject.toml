@@ -9,7 +9,7 @@ license = "MIT"
 milarun = 'milarun.cli:main'
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = ">3.7.1,<4.0"
 Cython = "^0.29.19"
 a2c-ppo-acktr = {git = "git://github.com/breuleux/pytorch-a2c-ppo-acktr-gail", branch = "milatweak"}
 apex = {git = "git://github.com/breuleux/apex", branch = "milatweak"}
