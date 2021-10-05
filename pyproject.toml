@@ -16,7 +16,7 @@ apex = {git = "git://github.com/breuleux/apex", branch = "milatweak"}
 babyai = {git = "git://github.com/breuleux/babyai", branch = "master"}
 baselines = {git = "git://github.com/breuleux/baselines", branch = "milatweak"}
 blessed = "^1.17.5"
-coleo = "^0.1.5"
+coleo = "0.1.4"
 gitpython = "^3.1.2"
 gputil = "^1.4.0"
 gym = {extras = ["atari"], version = "^0.17.2"}
@@ -25,11 +25,15 @@ jinja2 = "^2.11.2"
 mlperf_compliance = "^0.0.10"
 pandas = "^1.0.3"
 pycocotools = "^2.0.0"
-torch = "1.5.0"
-torchvision = "^0.6.0"
+#torch = "^1.9.0"
+#torchvision = "^0.10.0"
 tqdm = "^4.46.0"
 
 [tool.poetry.dev-dependencies]
+poethepoet = "^0.10.0"
+
+[tool.poe.tasks]
+force-cuda11 = "python -m pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html"
 
 [build-system]
 requires = ["poetry>=0.12"]
