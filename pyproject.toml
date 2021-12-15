@@ -33,7 +33,7 @@ tqdm = "^4.46.0"
 poethepoet = "^0.10.0"
 
 [tool.poe.tasks]
-force-cuda11 = "python -m pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html"
+force-cuda11 = "python -m pip install torch==1.10.0+cu113 torchvision==0.11.1+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html"
 
 [build-system]
 requires = ["poetry>=0.12"]

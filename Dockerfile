@@ -28,6 +28,7 @@ RUN conda install poetry -y
 RUN poetry update && poetry install && poe force-cuda11
 
 RUN chmod 755 -R /root
+RUN sed -i '11s/.*/if TORCH_MAJOR == 1:/' /root/anaconda3/envs/mlperf/lib/python3.9/site-packages/apex/amp/_amp_state.py
 
 # Configure environment variables
 ENV LANG=C.UTF-8

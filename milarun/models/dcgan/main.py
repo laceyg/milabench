@@ -197,7 +197,7 @@ def main(exp):
         netD.zero_grad()
         real_cpu = data[0].to(device)
         bsize = real_cpu.size(0)
-        label = torch.full((bsize,), real_label, device=device)
+        label = torch.full((bsize,), real_label, device=device, dtype=torch.float)
 
         output = netD(real_cpu)
         errD_real = criterion(output, label)
